@@ -1,0 +1,40 @@
+﻿<div class="row">
+	<div class="col-md-12">
+		<h2>Widget List</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+
+		<table>
+			<thead>
+				<tr>
+					<th>Widget</th>
+					<th>Color</th>
+					<th>Size</th>
+					<th>Quantity</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="widget in widgets">
+					<td>{{widget.name}}</td>
+					<td>{{widget.color}}</td>
+					<td>{{widget.size}}</td>
+					<td>{{widget.quantity}}</td>
+					<td>
+						<a ui-sref='widget-view({ widgetId: widget.id })'>View</a>
+						<span class="link-divider">|</span>
+						<a ui-sref='widget-edit({ widgetId: widget.id })'>Edit</a>
+						<span class="link-divider">|</span>
+						<a ng-click='deleteWidget(widget.id)'>Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<button ui-sref='widget-edit({ widgetId: null })' class="btn btn-primary">Create Widget</button>
+
+	</div>
+</div>
+

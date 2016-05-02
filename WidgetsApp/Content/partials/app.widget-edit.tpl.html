@@ -1,0 +1,48 @@
+﻿<div class="row">
+	<div class="col-md-12">
+		<h2>Edit Widget</h2>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+
+		<form name="widgetForm">
+
+			<div class="form-group">
+				<label for="widget-name">Name:</label>
+				<input id="widget-name" name="widgetName" ng-model="widget.name" placeholder="Widget Name...">
+			</div>
+
+			<div class="form-group">
+				<label for="widget-description">Description:</label>
+				<textarea id="widget-description" name="widgetDescription" ng-model="widget.description" placeholder="Description..."></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="widget-color">Color:</label>
+				<select id="widget-color" name="widgetColor" ng-options="color.value as color.label for color in colors | widgetColorSort" ng-model="widget.color">
+					<option value="">Select One...</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="widget-size">Size:</label>
+				<select id="widget-size" name="widgetSize" ng-options="size.value as size.label for size in sizes" ng-model="widget.size">
+					<option value="">Select One...</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="widget-quantity">Quantity:</label>
+				<input id="widget-quantity" name="widgetQuantity" type="number" ng-model="widget.quantity" placeholder="Quantity..." />
+			</div>
+
+			<button type="button" ng-click="saveWidget()" class="btn btn-primary">Save Widget</button>
+			<button type="button" ng-click="returnToWidgetList()" class="btn">Return to List</button>
+
+		</form>
+
+	</div>
+
+</div>

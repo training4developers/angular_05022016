@@ -1,0 +1,20 @@
+﻿<div ng-app="WidgetApp">
+
+	<div ng-controller="HomeCtrl">
+
+		Color Filter: <input ng-model="colorFilter" type="text"><br>
+		New Color: <input ng-model="newColor" type="text">
+		<button ng-click="addColor()">Add Color</button>
+
+		<ul>
+			<li ng-repeat="color in colors | filter:colorFilter | orderBy:'toString()':true">{{$odd}} {{color}}</li>
+		</ul>
+
+		<ul>
+			<li ng-repeat="country in countries | orderBy:'continent'">{{country.code}} - {{country.name}}</li>
+		</ul>
+
+
+	</div>
+
+</div>

@@ -1,0 +1,18 @@
+﻿.link-divider {
+		display: inline-block;
+		margin-left: 5px;
+		margin-right: 5px;
+		text-align:center;
+		width: 5px;
+}
+
+nav ul {
+	list-style-type: none;
+	
+}
+
+nav li {
+	list-style-position: inside;
+	display: inline-block;
+}
+

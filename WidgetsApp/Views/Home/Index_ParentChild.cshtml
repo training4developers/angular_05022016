@@ -1,0 +1,23 @@
+﻿<style>
+	.ng-scope { border:2px solid red; margin:5px; padding:5px; }
+</style>
+<div ng-app="WidgetApp">
+
+	<div ng-controller="ParentCtrl">
+
+		Parent Message: {{o.message}}<br>
+		Parent Message: <input ng-model="o.message" type="text">
+
+		<div ng-controller="ChildCtrl">
+
+			Child Message: {{o.message}}<br>
+			Child Message: <input ng-model="o.message" type="text">
+
+			<button ng-click="showScope()">Show Scope</button>
+
+
+		</div>
+
+	</div>
+
+</div>
