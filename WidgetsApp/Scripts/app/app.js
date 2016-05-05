@@ -1,23 +1,22 @@
-﻿"use strict";
+﻿angular.module("WidgetApp", [])
+	.directive("myDir", function () {
 
-angular.module("WidgetApp", [])
-	
-	.controller("HomeCtrl", function ($scope) {
+		return {
+			link: function (scope, element, attrs) {
+				console.dir(attrs);
 
-		$scope.sportItems = [
-			"Ken Griffey, Jr. Baseball Card",
-			"Football Picture of Eric",
-			"Jerry Rice Signed Jersey",
-			"2011 Poster Cricket World Cup"
-		];
+				attrs.$addClass("some-class");
+				attrs.$removeClass("some-class");
 
-		window.addSportItem = function (nsi) {
-			console.log("it fired off!")
-			$scope.$apply(function () {
-				$scope.sportItems.push(nsi);
-			});
-			//$scope.$digest();
-			console.log($scope);
+				console.log(attrs.$normalize("safe-house"));
+
+				attrs.$observe("myDir", function (newValue) {
+					console.log(newValue);
+				})
+			}
 		};
+
+	})
+	.controller("HomeCtrl", function ($scope) {
 
 	});
