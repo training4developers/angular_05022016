@@ -1,28 +1,6 @@
-﻿<style>
-	.ng-scope {
-		border: 2px solid red;
-		margin: 5px;
-		padding: 5px;
-	}
-</style>
-<div ng-app="WidgetApp">
-	<div ng-controller="HomeCtrl">
-
-		<input ng-model="showMe" type="checkbox"> Show Me
-
-
-		<div ng-if="showMe">
-			You can see me!
-		</div>
-
-
-
-		@*<ul>
-				<li ng-repeat="sportItem in sportItems">{{sportItem}} <button ng-click="editSportItem(sportItem); ">Edit</button></li>
-			</ul>
-
-			<input ng-model="newSportItem" type="text">
-			<button onclick="addSportItem(newSportItem)">Add Sport Item</button>*@
-
-	</div>
-</div>
+﻿<main>
+	<header>
+		<h1>Widgets App</h1>
+	</header>
+	<div ui-view></div>
+</main>

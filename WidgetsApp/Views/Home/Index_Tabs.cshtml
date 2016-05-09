@@ -1,0 +1,50 @@
+﻿<style>
+
+	.tabs > ul {
+		list-style-type: none;
+		margin:0;
+		padding:0;
+	}
+
+	.tabs > ul > li.active {
+		border:2px solid blue;
+	}
+
+	.tabs > ul > li {
+		display:inline-block;
+		padding:5px;
+		border:2px solid black;
+	}
+
+	.tabs > div {
+		border:2px solid blue;
+	}
+
+</style>
+<div ng-app="WidgetApp">
+	<div ng-controller="HomeCtrl">
+
+		<tabs active-tab-id="tab2">
+			<tab id="tab1" caption="Tab 1"><h1>Tab 1 Content</h1></tab>
+			<tab id="tab2" caption="Tab 2">Tab 2 Content</tab>
+			<tab id="tab3" caption="Tab 3">Tab 3 Content</tab>
+			<tab id="tab4" caption="Tab 4">Tab 4 Content</tab>
+		</tabs>
+
+		@*<ul>
+			<li><a href="#">Tab 1</a></li>
+			<li class="active"><a href="#">Tab 2</a></li>
+			<li><a href="#">Tab 3</a></li>
+			<li><a href="#">Tab 4</a></li>
+		</ul>
+		<div>Tab 1 Content...</div>
+		<div>Tab 2 Content...</div>
+		<div>Tab 3 Content...</div>
+		<div>Tab 4 Content...</div>*@
+
+
+
+
+
+	</div>
+</div>

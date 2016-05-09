@@ -1,0 +1,14 @@
+﻿<div ng-app="WidgetApp">
+	<div ng-controller="HomeCtrl as ctrl">
+		<div ng-controller="HomeCtrl as ctrl2">
+			<div ng-init="ctrl3.p = 12" ng-controller="HomeCtrl as ctrl3">
+				{{ctrl.message}}
+				{{ctrl2.message}}
+				{{ctrl3.message}}
+				<button ng-click="ctrl.doIt()">Do it! 1</button>
+				<button ng-click="ctrl2.doIt()">Do it! 2</button>
+				<button ng-click="ctrl3.doIt()">Do it! 3</button>
+			</div>
+		</div>
+	</div>
+</div>

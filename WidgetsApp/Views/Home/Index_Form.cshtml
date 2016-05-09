@@ -1,0 +1,118 @@
+﻿<style>
+
+	input.ng-invalid.ng-touched {
+		border: 2px solid red;
+	}
+
+	textarea {
+		vertical-align:middle;
+	}
+
+	.tall {
+		line-height:50px;
+	}
+
+	.red-text {
+		color:blue;
+	}
+
+	.form-label {
+		color:green;
+	}
+
+</style>
+
+<div ng-app="WidgetApp">
+	<div ng-controller="HomeCtrl">
+
+		<form name="contactForm" novalidate>
+
+			<label class="form-label">
+					First Name: <input ng-model="person.firstName" name="personFirstName" type="text" required>
+			</label>
+
+			<label>
+				Customer: <input type="checkbox" ng-model="person.isCustomer">
+			</label>
+
+			<fieldset>
+				<legend>
+					How did you hear about us?
+				</legend>
+
+				<div>
+					<label>
+						<input type="radio" ng-model="person.hearAboutUs"
+									 name="personHearAboutUs" value="Google"> Google
+					</label>
+				</div>
+
+				<div>
+					<label>
+						<input type="radio" ng-model="person.hearAboutUs"
+									 name="personHearAboutUs" value="Yahoo"> Yahoo
+					</label>
+				</div>
+
+				<div>
+					<label>
+						<input type="radio" ng-model="person.hearAboutUs"
+									 name="personHearAboutUs" value="TV"> TV
+					</label>
+				</div>
+
+			</fieldset>
+
+			<div>
+				<label class="tall">
+					Comments:
+					<textarea name="personComments"
+										ng-model="person.comments" rows="5" cols="60"></textarea>
+				</label>
+			</div>
+
+			<div>
+				<label>
+					Country:
+					<group-by-drop-down name="personCountry" ng-model="person.country"
+						cch-options="country.code as country.name group by country.groupBy for
+									country in countries" group-by="groupByField">
+					</group-by-drop-down>
+				</label>
+
+				<label>
+					<input type="radio" name="countryGroupByField" ng-model="groupByField" value='continent'> Continent
+				</label>
+				<label>
+					<input type="radio" name="countryGroupByField" ng-model="groupByField" value='language'> Language
+				</label>
+
+			</div>
+
+			<div>
+				<label>
+					Country:
+					<group-by-drop-down name="personCar" ng-model="person.car"
+			cch-options="car.id as car.name group by car.groupBy for
+									car in cars" group-by="carGroupByField">
+					</group-by-drop-down>
+				</label>
+
+				<label>
+					<input type="radio" name="carGroupByField" ng-model="carGroupByField" value='make'> Make
+				</label>
+				<label>
+					<input type="radio" name="carGroupByField" ng-model="carGroupByField" value='kind'> Kind
+				</label>
+				<label>
+					<input type="radio" name="carGroupByField" ng-model="carGroupByField" value='color'> Color
+				</label>
+
+			</div>
+
+
+		</form>
+
+
+	</div>
+</div>

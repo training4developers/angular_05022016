@@ -1,0 +1,25 @@
+﻿<div ng-app="WidgetApp">
+	<div ng-controller="HomeCtrl">
+
+		<form name="personForm" novalidate>
+
+			<div>
+				<label>
+					First Name:
+					<input ng-model="person.firstName" name="personFirstName" type="text" cch-required>
+				</label>
+			</div>
+
+			<div>
+				<label>
+					Last Name:
+					<input ng-model="person.lastName" name="personLastName" type="text">
+				</label>
+			</div>
+
+			<button type="button" ng-click="submit()">Submit</button>
+
+		</form>
+
+	</div>
+</div>

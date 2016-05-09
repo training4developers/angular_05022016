@@ -13,7 +13,17 @@ namespace WidgetsApp.App_Start
 										"~/Scripts/angular.js",
 										"~/Scripts/angular-ui-router.js",
 										"~/Scripts/angular-sanitize.js",
-										"~/Scripts/app/app.js"
+										"~/Scripts/app/init.js",
+										"~/Scripts/app/constants.dev.js",
+										"~/Scripts/app/services/widgets.js",
+										"~/Scripts/app/configs/router.js",
+										"~/Scripts/app/controllers/home.js",
+										"~/Scripts/app/controllers/viewWidget.js",
+										"~/Scripts/app/controllers/about.js",
+										"~/Scripts/app/controllers/mission.js",
+										"~/Scripts/app/controllers/team.js",
+										"~/Scripts/app/controllers/history.js",
+										"~/Scripts/app/start.js"
 						));
 
 						bundles.Add(new StyleBundle("~/Content/css").Include(
